@@ -2,13 +2,8 @@
 <html>
     <!-- Import the component -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
-    <head>
-        <title>Como la beisbol</title>
-    </head>
-    <body>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
         <script
             type="module"
             src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
@@ -17,10 +12,13 @@
             nomodule
             src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
         </script>
-
-
-
-        <model-viewer src="C:assets\Silla de angel para AR.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="assets/5.png" shadow-intensity="1" environment-image="pillars_1k.hdr" auto-rotate>
+        <style>
+            model-viewer {
+                width: 400px;
+                height: 600px;
+            }
+        </style>
+         <model-viewer src="assets\Silla de angel para AR.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="assets/5.png" shadow-intensity="1" environment-image="pillars_1k.hdr" auto-rotate>
             <div class="progress-bar hide" slot="progress-bar">
                 <div class="update-bar"></div>
             </div>
@@ -32,29 +30,6 @@
             </div>
         </model-viewer>
 
-        <style>
-            model-viewer {
-                width: 400px;
-                height: 600px;
-            }
-        </style>
-
-        
-
-       
-
-        
-
-
-        <a href="https://www.fcfm.uanl.mx">Link de la pagina de la facu</a>
-        
-       
-        
-    </body>
-    <footer>
-        <p>&copy; 2026 Mi Sitio Web. Todos los derechos reservados.</p>
-            <nav>
-                <a href="file:///C:/Users/Pc/Desktop/Proyectos/Lab%20Progra%20web/Semana%201/Acerda%20de.html">acerca de</a> | 
-            </nav>
-    </footer>   
+    
+    
 </html>
