@@ -1,9 +1,28 @@
 <!DOCTYPE html>
 <html>
+    <!-- Import the component -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
     <head>
         <title>Como la beisbol</title>
     </head>
     <body>
+
+
+
+
+
+        <model-viewer src="C:\Users\Pc\Desktop\Proyectos\Procesamiento de imagenes\PIA PI\assets" ar ar-modes="scene-viewer webxr quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" environment-image="pillars_1k.hdr" auto-rotate>
+            <div class="progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+            </div>
+            <button slot="ar-button" id="ar-button">
+                View in your space
+            </button>
+            <div id="ar-prompt">
+                <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+            </div>
+        </model-viewer>
+
         
 
        
