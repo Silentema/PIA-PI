@@ -67,23 +67,45 @@
         </model-viewer>
         <!--<button slot="ar-button" id="ar-button">View in your space</button>-->
 
-        <model-viewer
-            src="assets/RuiAnimacionResetVectors.glb"
-            ar
-            ar-modes="scene-viewer webxr quick-look"
-            camera-controls
-            tone-mapping="neutral"
-            poster="assets/Rui.png"
-            shadow-intensity="1"
-            auto-rotate>
+        
+
+        <model-viewer 
+        src="assets/RuiAnimacion.glb" 
+        id="modelo"
+        ar 
+        ar-modes="scene-viewer webxr quick-look" 
+        camera-controls 
+        tone-mapping="neutral" 
+        poster="assets/Rui.png" 
+        shadow-intensity="1" 
+        autoplay>
             <div class="progress-bar hide" slot="progress-bar">
                 <div class="update-bar"></div>
             </div>
-            
+            <button slot="ar-button" id="ar-button">
+                View in your space
+            </button>
             <div id="ar-prompt">
-                <img src="https://modelviewer.dev/shared-assets/icons/hand.png" alt="AR prompt" />
+                <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
             </div>
         </model-viewer>
+
+
+
+        <script>
+    const modelo = document.querySelector("#modelo");
+
+    modelo.addEventListener("load", () => {
+
+        const material = modelo.model.materials[0];
+
+        // Cambiar el modo de Alpha
+        material.setAlphaMode("OPAQUE");
+
+        
+    });
+</script>
+
 
 
 
