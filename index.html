@@ -70,8 +70,7 @@
         
 
         <model-viewer 
-        src="assets/RuiAnimacion.glb" 
-        id="modelo"
+        src="assets/resetVectorsv2.glb" 
         ar 
         ar-modes="scene-viewer webxr quick-look" 
         camera-controls 
@@ -90,21 +89,7 @@
             </div>
         </model-viewer>
 
-
-
-        <script>
-    const modelo = document.querySelector("#modelo");
-
-    modelo.addEventListener("load", () => {
-
-        const material = modelo.model.materials[0];
-
-        // Cambiar el modo de Alpha
-        material.setAlphaMode("OPAQUE");
-
         
-    });
-</script>
 
 
 
