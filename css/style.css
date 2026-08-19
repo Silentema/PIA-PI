@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600;800&family=Lobster&display=swap");
+
+:root { --green: #1f534e; --red: #d32c3a; }
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body { background: #fff; color: #fff; font-family: "Barlow", Arial, sans-serif; }
+button { font: inherit; }
+.page { width: 100%; min-height: 100vh; overflow: hidden; background: #fff; }
+.header { height: 80px; position: relative; display: flex; align-items: center; justify-content: center; background: var(--green); }
+.brand { text-align: center; }
+.brand h1 { margin: 0; font: 400 clamp(27px, 7vw, 36px)/1.2 "Lobster", cursive; letter-spacing: -.36px; }
+.brand p { margin: 0; color: #e1e1e1; font-size: 11px; font-weight: 600; line-height: 1.5; letter-spacing: -.11px; }
+.icon { position: absolute; top: 0; height: 80px; width: 64px; padding: 0; border: 0; background: transparent; display: grid; place-items: center; cursor: pointer; }
+.menu { left: 0; }
+.camera { right: 0; background: #16413d; }
+.camera svg { width: 36px; height: 36px; padding: 7px; border-radius: 50%; background: #fff; }
+.slider { position: relative; height: 184px; overflow: hidden; background: #777; }
+.slides { display: flex; height: 100%; width: 100%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.slides::-webkit-scrollbar { display: none; }
+.slide { flex: 0 0 100%; height: 100%; scroll-snap-align: start; background: linear-gradient(#0009, #0009), url("https://api.builder.io/api/v1/image/assets/TEMP/78ef537b98275010ea5c0b73f8274a7aa24e4a8c?width=750") center / cover; }
+.arrow { position: absolute; top: 0; bottom: 0; width: 48px; padding: 0; border: 0; background: transparent; display: grid; place-items: center; cursor: pointer; }
+.previous { left: 0; }
+.next { right: 0; }
+.dots { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); display: flex; gap: 13px; }
+.dot { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 50%; background: #e5e5e533; }
+.dot.active { background: #e5e5e5; }
+.divider { height: 8px; background: var(--green); }
+.sections { width: 100%; max-width: 960px; margin: 0 auto; padding: 24px 28px 48px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 22px; }
+.card { position: relative; aspect-ratio: 152 / 136; border-radius: 20px; overflow: hidden; display: grid; place-items: center; background: #777 center / cover; }
+.scan { background-image: url("https://api.builder.io/api/v1/image/assets/TEMP/9637d263bc32da3f8f061d4227841f9e3c842d01?width=304"); }
+.teams { background-image: url("https://api.builder.io/api/v1/image/assets/TEMP/dfff7d135c7805e5d0e68b7b3e5e754e98f6c9aa?width=304"); }
+.game { background-image: url("https://api.builder.io/api/v1/image/assets/TEMP/78ef537b98275010ea5c0b73f8274a7aa24e4a8c?width=304"); }
+.trivia { background-image: url("https://api.builder.io/api/v1/image/assets/TEMP/9d9494c96ec54ebcecb3f9e345bb5164cecc91fe?width=304"); }
+.history { background-image: url("https://api.builder.io/api/v1/image/assets/TEMP/75823cbc074d9c4b939b1b4a61c8052f4728775d?width=304"); }
+.card::before { content: ""; position: absolute; inset: 0; background: #0005; }
+.card::after { content: ""; position: absolute; top: calc(50% + 15px); width: 83px; height: 4px; background: var(--red); }
+.card span { position: relative; z-index: 1; margin-top: -2px; font-size: 20px; font-weight: 800; line-height: 1.5; letter-spacing: -.2px; }
+@media (min-width: 640px) { .sections { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .sections { padding: 40px 28px 64px; } }
