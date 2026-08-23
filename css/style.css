@@ -126,7 +126,7 @@ button {
   flex: 0 0 100%;
   height: 100%;
   scroll-snap-align: start;
-  background: linear-gradient(#0009, #0009), url("https://api.builder.io/api/v1/image/assets/TEMP/78ef537b98275010ea5c0b73f8274a7aa24e4a8c?width=750") center / cover;
+  background: linear-gradient(#0009, #0009), url("https://api.builder.io/api/v1/image/assets/TEMP/78ef537b98275010ea5c0b73f8274a7aa24e4a8c?width=1600") center / cover;
 }
 
 .arrow {
@@ -211,23 +211,23 @@ button {
 }
 
 .scan {
-  background-image: url("https://api.builder.io/api/v1/image/assets/TEMP/9637d263bc32da3f8f061d4227841f9e3c842d01?width=304");
+  background-image: url("https://api.builder.io/api/v1/image/assets/TEMP/9637d263bc32da3f8f061d4227841f9e3c842d01?width=1200");
 }
 
 .teams {
-  background-image: url("https://api.builder.io/api/v1/image/assets/TEMP/dfff7d135c7805e5d0e68b7b3e5e754e98f6c9aa?width=304");
+  background-image: url("https://api.builder.io/api/v1/image/assets/TEMP/dfff7d135c7805e5d0e68b7b3e5e754e98f6c9aa?width=1200");
 }
 
 .game {
-  background-image: url("https://api.builder.io/api/v1/image/assets/TEMP/78ef537b98275010ea5c0b73f8274a7aa24e4a8c?width=304");
+  background-image: url("https://api.builder.io/api/v1/image/assets/TEMP/78ef537b98275010ea5c0b73f8274a7aa24e4a8c?width=1200");
 }
 
 .trivia {
-  background-image: url("https://api.builder.io/api/v1/image/assets/TEMP/9d9494c96ec54ebcecb3f9e345bb5164cecc91fe?width=304");
+  background-image: url("https://api.builder.io/api/v1/image/assets/TEMP/9d9494c96ec54ebcecb3f9e345bb5164cecc91fe?width=1200");
 }
 
 .history {
-  background-image: url("https://api.builder.io/api/v1/image/assets/TEMP/75823cbc074d9c4b939b1b4a61c8052f4728775d?width=304");
+  background-image: url("https://api.builder.io/api/v1/image/assets/TEMP/75823cbc074d9c4b939b1b4a61c8052f4728775d?width=1200");
 }
 
 .card::before {
@@ -289,4 +289,18 @@ button {
   flex: 1 1 360px;
   width: min(100%, 500px);
   height: 600px;
+}
+
+.contenedor-general {
+  width: calc(100% - 32px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px 40px; 
+}
+
+.titulo-interior {
+  color: #C00000;
+  font-size: 30px;
+  font-family: "Barlow", Arial, sans-serif;
+  font-weight: bold;
 }
