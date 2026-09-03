@@ -310,3 +310,37 @@ button {
   font-family: "Barlow", Arial, sans-serif;
   font-weight: bold;
 }
+.Respuesta{
+  border: none;
+  background-color: #d32c3a;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+.Respuesta:hover{
+  background-color:#840000;
+}
+.Siguiente{
+  border: none;
+  background-color: #1f534e;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+.Siguiente:hover{
+  background-color:#102a27;
+}
+.Menu1{
+  border: none;
+  background-color: #ebebeb;
+  color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+.Menu1:hover{
+  background-color:#040505;
+  color: white;
+}
