@@ -344,3 +344,36 @@ button {
   background-color:#040505;
   color: white;
 }
+
+.Modal {
+  background-color: #0000009f;
+  opacity: 0;
+  position: fixed;  
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Modal-inner {
+  position: relative;
+}
+
+.Close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.Modal.Open{
+  Opacity: 1;
+  z-index: 999;
+}
+
