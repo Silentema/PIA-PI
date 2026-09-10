@@ -7,6 +7,8 @@
         <title>Como la beisbol</title>
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
         <link rel="stylesheet" href="css/style.css">    
+        <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
     </head>
     <body>
 
@@ -19,8 +21,16 @@
 
       <div class="contenedor-general"> <!--No se como ponerle la esctructura a este div xd-->
         <h2 class="titulo-interior">EQUIPOS</h2>
-        
-        </div>
+        <a-scene
+        mindar-image="imageTargetSrc: assets/targets.mind;"
+        vr-mode-ui="enabled: false"
+        device-orientation-permission-ui="enabled: false"
+        >
+          <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+            <a-entity mindar-image-target="targetIndex: 0">
+            <a-sphere position="0 0 0" radius="0.1" color="red"></a-sphere>
+          </a-entity>
+        </a-scene>
       </div>
     </main>
     <script src="js/javascript.js"></script>
