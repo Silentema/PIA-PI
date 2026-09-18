@@ -18,17 +18,17 @@
       
 
       <div class="contenedor-general"> <!--No se como ponerle la esctructura a este div xd-->
-        <h2 class="Bienvenido">BIENVENIDO A LA TRIVIA DE BEISBOL</h2>
-        <button class="Empezar">Empezar</button>
         
-        <div class="InfoTest hide">
+        <h2 class="Bienvenido">BIENVENIDO A LA TRIVIA DE BEISBOL</h2>
+        <button class="Empezar" id="Empezar">Empezar</button>
+        <div class="InfoTest ">
           <h2 class="titulo-interior">TRIVIA</h2>
           <span class = "question-count">Pregunta no: <span id="current">1</span>/<span id="total">5</span></span>
           <span class="timer">Time <span id ="time">60</span>s</span>
            <span class="score">Score <span id ="score">0</span></span>
         </div>
-        <div class="pregunta hide">
-          <p class="Titulo-de-pregunta">Nombre de pregunta</p>
+        <div class="pregunta ">
+          <p class="Titulo-de-pregunta" id="Titulo-de-pregunta">Nombre de pregunta</p>
           <div class="Posibles-Respuestas">
             <div class = "Respuesta">
             <input type="radio" name="answer" id="a" class="answer">
@@ -39,17 +39,17 @@
             <label for="b" id="b_text">Opcion B</label>
           </div>
            <div class = "Respuesta">
-            <input type="radio" name="answer" id="b" class="answer">
-            <label for="b" id="b_text">Opcion C</label>
+            <input type="radio" name="answer" id="c" class="answer">
+            <label for="c" id="c_text">Opcion C</label>
           </div>
           </div>
-          <button class="enviar">Enviar</button>
+          <button class="enviar" id="enviar">Enviar</button>
         </div>
-        <div class="Victoria hide">
+        <div class="Victoria ">
           <h2 class="titulo-Final">Felicidades</h2>
           <p>Tu puntuacion: <span id="final-score">0</span>/100</p>
           <p>Time: <span id="completition-time">0</span>segundos</p>
-          <button class="Siguiente">Siguiente Ronda</button>
+          <button class="Siguiente" id="Siguiente">Siguiente Ronda</button>
           <button class="Menu1">Menu</button>
         </div>
         <br>

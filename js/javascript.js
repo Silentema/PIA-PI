@@ -99,26 +99,26 @@ let score= 0;
 let timerleft= 60;
 let timer;
 let shuffuledquizdata= [];
-let isQuizStarted="false";
+let isQuizStarted=false;
 let startime;
-const questionEL = document.getElementById('question');
+const questionEL = document.getElementById('Titulo-de-pregunta');
 const a_text= document.getElementById('a_text');
 const b_text= document.getElementById('b_text');
 const c_text= document.getElementById('c_text');
 const submitBtn= document.getElementById('enviar');
 const answer= document.querySelectorAll('.answer');
-const quizBody = document.querySelector('.quiz-body');
+const quizBody = document.querySelector('.pregunta');
 const resultContainer = document.querySelector('.Victoria');
 const finalScoreEl = document.getElementById('final-score');
 const RestartBtn = document.getElementById('Siguiente');
-const CurrentQuestion= document.getElementById('Siguiente');
+const CurrentQuestion= document.getElementById('current');
 const TotalQuestions= document.getElementById('total');
-const Score= document.getElementById('Score');
+const Score= document.getElementById('score');
 const Time= document.getElementById('time');
 const StartBtn= document.getElementById('Empezar');
-const quizHeader= document.querySelector('.quiz-header');
-const startscreen = document.getElementById('start-screen');
-const completitionTime = document.getElementById('Completition-Time');
+const quizHeader= document.querySelector('.InfoTest');
+const startscreen = document.getElementById('Pantalla-de-Bienvenida');
+const completitionTime = document.getElementById('completition-time');
 
 
 
@@ -154,7 +154,7 @@ function loadquiz(){
 }
 
 function startTimer(){
-  startime= Date.now;
+  startime= Date.now();
   timer = setInterval(() => {
     timerleft--;
     Time.innerText = timerleft;
@@ -165,12 +165,12 @@ function startTimer(){
 }
 
 function deselectanswers(){
-  answer.foreach(answer => answer.checked=false)
+  answer.forEach(answer => answer.checked=false)
 }
 
 function getselected(){
   let Onswer;
-  answer.foreach(Onswer => {
+  answer.forEach(Onswer => {
     if (answer.checked){
       Onswer = answer.id;
     }
@@ -180,15 +180,15 @@ function getselected(){
 
 function endQuiz(){
   clearInterval(timer);
-  quizBody.classList.add('hide');
-  quizHeader.classList.add('hide');
-  resultContainer.classList.remove('hide');
+  quizBody.classList.add("hide");
+  quizHeader.classList.add("hide");
+  resultContainer.classList.remove("hide");
   finalScoreEl.innerText = score;
   const TimeTaken =Math.floor((Date.now-startime)/1000);
   completitionTime.innerText = TimeTaken;
 }
 
-submitBtn.addEventListener('click', () => {
+submitBtn.addEventListener("click", () => {
   const answer = getselected();
   if(answer){
     if(answer === shuffuledquizdata[currentQuiz].correct){
@@ -205,24 +205,24 @@ submitBtn.addEventListener('click', () => {
   }
 })
 
-RestartBtn.addEventListener('click', ()=>{
+RestartBtn.addEventListener("click", ()=>{
   currentQuiz=0;
   score=0;
-  timeLeft= 60;
+  timerleft= 60;
   Score.innerText= score;
   Time.innerText = timerleft;
-    quizBody.classList.add('hide');
-  quizHeader.classList.add('hide');
-  resultContainer.classList.remove('hide');
+    quizBody.classList.add("hide");
+  quizHeader.classList.add("hide");
+  resultContainer.classList.remove("hide");
   isQuizStarted= false;
 })
 
-StartBtn.addEventListener('click', ()=>{
-  Score.innerText= score;
-  Time.innerText = timerleft;
-    quizBody.classList.add('hide');
-  quizHeader.classList.add('remove');
-  resultContainer.classList.remove('remove');
+StartBtn.addEventListener("click", ()=>{
+  console.log("Botón empezar presionado");
+  startscreen.classList.add("hide");
+  quizBody.classList.remove("hide");
+  quizHeader.classList.remove("hide");
+  resultContainer.classList.add("hide");
   isQuizStarted= true;
   shuffleQuestions();
   loadquiz();

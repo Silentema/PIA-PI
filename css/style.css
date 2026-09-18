@@ -390,8 +390,13 @@ button {
 .InfoTest{
   color:#040505;
   display: flex;
-  justify-content: space-between;
-  padding: 15px;
+  justify-content: center; 
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 10px;          /* separación respecto al título */
+  margin-bottom: 30px;
+  font-weight: bold;
+  
 }
 
 .enviar{
