@@ -296,13 +296,16 @@ button {
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px 16px 40px; 
+  border-radius: 10px;
 }
 
-.titulo-interior {
+.titulo-interior, .titulo-Final {
   color: #C00000;
   font-size: 30px;
   font-family: "Barlow", Arial, sans-serif;
   font-weight: bold;
+  text-align: center;
+  padding:20px;
 }
 .Titulo-de-pregunta{
   color: #C00000;
@@ -310,13 +313,18 @@ button {
   font-family: "Barlow", Arial, sans-serif;
   font-weight: bold;
 }
+.Posibles-Respuestas{
+  display: grid;
+  gap: 10px;
+}
 .Respuesta{
   border: none;
   background-color: #d32c3a;
   color: white;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
   transition-duration: 0.4s;
+  padding:15px;
 }
 .Respuesta:hover{
   background-color:#840000;
@@ -328,6 +336,7 @@ button {
   border-radius: 8px;
   cursor: pointer;
   transition-duration: 0.4s;
+  padding: 12px 25px;
 }
 .Siguiente:hover{
   background-color:#102a27;
@@ -339,6 +348,7 @@ button {
   border-radius: 8px;
   cursor: pointer;
   transition-duration: 0.4s;
+  padding: 12px 25px;
 }
 .Menu1:hover{
   background-color:#040505;
@@ -377,3 +387,55 @@ button {
   z-index: 999;
 }
 
+.InfoTest{
+  color:#040505;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.enviar{
+  border: none;
+  background-color: #ebebeb;
+  color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  padding: 12px 25px;
+}
+.enviar:hover{
+  background-color:#040505;
+  color: white;
+}
+
+.Victoria{
+  color:#040505;
+  text-align: center;
+}
+
+.Bienvenido{
+  color: #C00000;
+  font-size: 30px;
+  font-family: "Barlow", Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding:20px;
+}
+
+.Empezar{
+  text-align: center;
+  border: none;
+  background-color: #1f534e;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  padding: 12px 25px;
+ 
+}
+.Empezar:hover{
+  background-color:#102a27;
+}
+.hide{
+  display: none;
+}

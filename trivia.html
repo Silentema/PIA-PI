@@ -18,22 +18,41 @@
       
 
       <div class="contenedor-general"> <!--No se como ponerle la esctructura a este div xd-->
-        <h2 class="titulo-interior">TRIVIA</h2>
-        <div class="pregunta">
-          <p class="Titulo-de-pregunta">Cual era el primer nombre de los Bravos?</p>
-          <button class="Respuesta">Jaguares</button> <button class="Respuesta">Perricos</button> <button class="Respuesta">Cachorros</button>
-          <p class="Titulo-de-pregunta">Por que obtuvieron los Conspiradores ese nombre?</p>
-          <button class="Respuesta"> Por El Porfiriato</button> <button class="Respuesta">por la Conspiración de 1810</button> <button class="Respuesta"> Por La Revolucion Mexicana</button>
-          <p class="Titulo-de-pregunta">Cuantos títulos tienen los diablos rojos?</p>
-          <button class="Respuesta">20 titulos</button> <button class="Respuesta">16 titulos</button> <button class="Respuesta">17 titulos</button>
-           <p class="Titulo-de-pregunta">Empresario que creo el equipo del Aguila de Veracruz a base de su compañía petrolera?</p>
-          <button class="Respuesta">German Larrea</button> <button class="Respuesta">Sir Weetman Peterson</button> <button class="Respuesta">Carlos Slim</button>
-           <p class="Titulo-de-pregunta">Ano en el que obtuvieron su único campeonato los Guerreros de Oaxaca?</p>
-          <button class="Respuesta">2021</button> <button class="Respuesta">1998</button> <button class="Respuesta">1962</button>
+        <h2 class="Bienvenido">BIENVENIDO A LA TRIVIA DE BEISBOL</h2>
+        <button class="Empezar">Empezar</button>
+        
+        <div class="InfoTest hide">
+          <h2 class="titulo-interior">TRIVIA</h2>
+          <span class = "question-count">Pregunta no: <span id="current">1</span>/<span id="total">5</span></span>
+          <span class="timer">Time <span id ="time">60</span>s</span>
+           <span class="score">Score <span id ="score">0</span></span>
+        </div>
+        <div class="pregunta hide">
+          <p class="Titulo-de-pregunta">Nombre de pregunta</p>
+          <div class="Posibles-Respuestas">
+            <div class = "Respuesta">
+            <input type="radio" name="answer" id="a" class="answer">
+            <label for="a" id="a_text">Opcion A</label>
+          </div>
+          <div class = "Respuesta">
+            <input type="radio" name="answer" id="b" class="answer">
+            <label for="b" id="b_text">Opcion B</label>
+          </div>
+           <div class = "Respuesta">
+            <input type="radio" name="answer" id="b" class="answer">
+            <label for="b" id="b_text">Opcion C</label>
+          </div>
+          </div>
+          <button class="enviar">Enviar</button>
+        </div>
+        <div class="Victoria hide">
+          <h2 class="titulo-Final">Felicidades</h2>
+          <p>Tu puntuacion: <span id="final-score">0</span>/100</p>
+          <p>Time: <span id="completition-time">0</span>segundos</p>
+          <button class="Siguiente">Siguiente Ronda</button>
+          <button class="Menu1">Menu</button>
         </div>
         <br>
-        <button class="Siguiente">Siguiente Ronda</button>
-        <button class="Menu1">Menu</button>
         </div>
       </div>
     </main>
