@@ -19,6 +19,42 @@ fetch("componentes/header.html")
     console.error(error);
   });
 
+const slides = document.querySelector(".slides");
+const slideElements = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+const nextButton = document.querySelector(".next");
+const previousButton = document.querySelector(".previous");
+let imagenActual = 0;
+
+function actualizarDot() {
+  dots.forEach((dot, indice) => {
+    dot.classList.toggle("active", indice === imagenActual);
+  });
+}
+
+function mostrarSlide(indice) {
+  imagenActual = indice;
+
+  slides.scrollTo({
+    left: slides.clientWidth * imagenActual,
+    behavior: "smooth"
+  });
+
+  actualizarDot();
+}
+
+if (slides && slideElements.length && dots.length && nextButton && previousButton) {
+  nextButton.addEventListener("click", () => {
+    mostrarSlide((imagenActual + 1) % slideElements.length);
+  });
+
+  previousButton.addEventListener("click", () => {
+    mostrarSlide(
+      (imagenActual - 1 + slideElements.length) % slideElements.length
+    );
+  });
+}
+
 
 
   //Aparir de aqui voy a poner todos las demas fuciones de JS, de preferencia solo hay que usar un Archivo JS para mas simplicidad 
@@ -26,13 +62,15 @@ const openBtn = document.getElementById("Open-Modal");
 const closeBtn = document.getElementById("Close-Modal");
 const modal = document.getElementById("Modal");
 
-openBtn.addEventListener("click", () => {
-  modal.classList.add("Open");
-});
+if (openBtn && closeBtn && modal) {
+  openBtn.addEventListener("click", () => {
+    modal.classList.add("Open");
+  });
 
-closeBtn.addEventListener("click", () => {
-  modal.classList.remove("Open");
-});
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("Open");
+  });
+}
 
 
 
@@ -188,6 +226,7 @@ function endQuiz(){
   completitionTime.innerText = TimeTaken;
 }
 
+if (submitBtn && RestartBtn && StartBtn) {
 submitBtn.addEventListener("click", () => {
   const answer = getselected();
   if(answer){
@@ -228,3 +267,5 @@ StartBtn.addEventListener("click", ()=>{
   loadquiz();
   startTimer();
 })
+}
+
