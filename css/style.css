@@ -126,7 +126,36 @@ button {
   flex: 0 0 100%;
   height: 100%;
   scroll-snap-align: start;
-  background: linear-gradient(#0009, #0009), url("https://api.builder.io/api/v1/image/assets/TEMP/78ef537b98275010ea5c0b73f8274a7aa24e4a8c?width=1600") center / cover;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+.slide:nth-child(1) {
+  background-image: 
+  linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  url("../assets/Slider1.png");
+}
+
+.slide:nth-child(2) {
+  background-image: url("../assets/Slider2.jpg");
+}
+
+.slide:nth-child(3) {
+  background-image: url("../assets/Slider3.jpg");
+}
+
+.slide:nth-child(4) {
+  background-image: url("../assets/Sllider4.jpg");
+}
+
+.slide:nth-child(5) {
+  background-image: url("../assets/Slider5.jpg");
+}
+
+.slide:nth-child(6) {
+  background-image: url("../assets/Sllider6.jpg");
 }
 
 .arrow {
@@ -211,23 +240,37 @@ button {
 }
 
 .scan {
-  background-image: url("https://api.builder.io/api/v1/image/assets/TEMP/9637d263bc32da3f8f061d4227841f9e3c842d01?width=1200");
+  background-image: 
+  linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),
+  url("../assets/Escanear.png");
 }
 
 .teams {
-  background-image: url("https://api.builder.io/api/v1/image/assets/TEMP/dfff7d135c7805e5d0e68b7b3e5e754e98f6c9aa?width=1200");
-}
+  background-image: 
+  linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),
+  url("../assets/Equipos.jpg");}
 
 .game {
-  background-image: url("https://api.builder.io/api/v1/image/assets/TEMP/78ef537b98275010ea5c0b73f8274a7aa24e4a8c?width=1200");
-}
+  background-image:
+  linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),
+  url("../assets/Minijuego.jpg");}
 
 .trivia {
-  background-image: url("https://api.builder.io/api/v1/image/assets/TEMP/9d9494c96ec54ebcecb3f9e345bb5164cecc91fe?width=1200");
-}
+  background-image: 
+  linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),
+  url("../assets/Trivia.png");}
 
 .history {
-  background-image: url("https://api.builder.io/api/v1/image/assets/TEMP/75823cbc074d9c4b939b1b4a61c8052f4728775d?width=1200");
+  background-image:
+  linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),
+  url("../assets/Historia.png");  
+}
+
+
+.gallery {
+  background-image: 
+  linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),
+  url("../assets/Galeria.jpg");;
 }
 
 .card::before {
